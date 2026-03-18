@@ -34,7 +34,7 @@ from zoneinfo import ZoneInfo
 import scipy.io
 from neuroconv.utils import dict_deep_update, load_dict_from_file
 
-from .forli2025nwbconverter import Forli2025NWBConverter
+from yartsev_lab_to_nwb.forli2025.forli2025nwbconverter import Forli2025NWBConverter
 
 
 def compute_t_offset(data_dir_path: Path) -> float:
