@@ -1,0 +1,29 @@
+[project]
+name = "yartsev-lab-to-nwb"
+version = "0.0.1"
+description = "NWB conversion scripts for the Yartsev Lab (Forli et al. 2025, Nature)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "CatalystNeuro", email = "ben.dichter@catalystneuro.com" }]
+dependencies = ["neuroconv", "nwbinspector"]
+
+[project.optional-dependencies]
+forli2025 = [
+    "neuroconv",
+    "pynwb",
+    "h5py",
+    "scipy",
+    "numpy",
+    "hdmf",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["*.yaml", "*.yml", "*.json"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/yartsev_lab_to_nwb"]

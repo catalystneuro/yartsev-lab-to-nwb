@@ -1,0 +1,45 @@
+NWBFile:
+  experiment_description: >
+    Wireless Neuropixels recordings from the hippocampus of freely flying Egyptian
+    fruit bats (Rousettus aegyptiacus) engaged in rewarded spontaneous aerial foraging.
+    Bats flew freely in an indoor or outdoor enclosure between two automated feeders.
+    We simultaneously recorded ensemble activity from putative single neurons and the
+    local field potential (LFP) from dorsal hippocampus (CA1/CA3) while bats
+    spontaneously alternated between rest and flight. During rest, time-compressed
+    forward and reverse replays of multiple flight trajectories coincided with
+    sharp-wave ripples. During flight, neural ensembles exhibited fast representational
+    sweeps phase-locked to the wing-beat cycle rather than theta oscillations.
+    Associated publication: Forli, Fan, Qi & Yartsev, Nature 2025.
+  institution: University of California, Berkeley
+  lab: Yartsev Lab
+  experimenter:
+    - Forli, Angelo
+    - Fan, Wudi
+    - Qi, Kevin K.
+    - Yartsev, Michael M.
+  keywords:
+    - hippocampus
+    - place cells
+    - replay
+    - sharp-wave ripples
+    - theta sequences
+    - flight
+    - navigation
+    - Egyptian fruit bat
+    - Rousettus aegyptiacus
+    - Neuropixels
+    - freely moving
+  related_publications:
+    - doi:10.1038/s41586-025-09341-z
+
+Subject:
+  species: Rousettus aegyptiacus
+  sex: M
+  age: P1Y/  # ISO 8601 open interval: at least 1 year old; exact age unknown. All bats were adults (from paper).
+  description: >
+    Adult male Egyptian fruit bat implanted with up to three Neuropixels 1.0 probes
+    targeting dorsal hippocampus (CA1/CA3). Bats were mildly food-restricted (>85%
+    of baseline weight) during training and recording. Housed on a 12-h reverse
+    light cycle. All procedures approved by UC Berkeley IACUC.
+    Body weight range across cohort: 151–171 g (from Forli et al. 2025).
+  # subject_id is set per-session in convert_session.py

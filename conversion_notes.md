@@ -69,23 +69,27 @@ yartsev_demo_data/
 - Analysis code: NP_Bat_Demo.m (in demo data)
 - Data source: local path `/Users/pauladkisson/Documents/CatalystNeuro/YartsevConv/yartsev_demo_data/`
 
+## Metadata (from paper)
+
+- Species: *Rousettus aegyptiacus* (Egyptian fruit bat)
+- All bats: adult males, body weight 151–171 g
+- 6 bats total (5 with 3 probes, 1 with 2 probes), 23 sessions (3–4/bat)
+- Recording system: SpikeGadgets wireless Neuropixels 1.0 headstage
+- Position tracking: 16 Motion Analysis Raptor-12HS cameras, Cortex-64 software, 120 Hz
+- Spike sorting: Kilosort4 + Phy visual curation
+- LFP band: 0.5–200 Hz; spike band: 600–6000 Hz
+- Institution: University of California, Berkeley (Pacific timezone)
+- DOI: doi:10.1038/s41586-025-09341-z
+- 4 microphones total; only Mic1 in demo data
+- t=0 in data ≈ start of behavioral tracking; neural recording starts ~95 s later
+- Session start time exact (time-of-day) unknown; using midnight 2024-04-19 as placeholder
+
 ## Open Questions
 
-- [ ] **CRITICAL**: Per-unit spike times (`good_units.spikeTimes_usec`) are stored in MATLAB table objects
-  (MCOS) that scipy.io and pymatreader cannot read. Options:
-  1. Are raw Kilosort4 output folders available? (mentioned in MATLAB script: `kilosort4_outdir_probe*`)
-  2. Can the lab re-export `good_units` as a v7.3 .mat file or CSV?
-  3. Can the lab save spike times per unit in a simple array format?
-- [ ] Are the Kilosort4 output directories (`kilosort4_outdir_probe*`) available in the full dataset?
-- [ ] Full dataset structure: how many bats, sessions, probes per session?
-- [ ] Subject metadata: bat IDs, DOB or age, sex, weight
-- [ ] Session start times with timezone
-- [ ] DOI for the paper
+- [ ] Exact per-bat weight and DOB not in processed data files — needs subject records
+- [ ] Exact session start times (time-of-day) unknown — using midnight as placeholder
 - [ ] Is there a DANDI dandiset already?
-- [ ] RPL table (ripple events table) is also MATLAB table/MCOS — same issue
-- [ ] How many microphones total? (comment says 4, but only Mic1 is in demo)
-- [ ] What recording system was used for audio (microphone)?
-- [ ] Probe geometry: which Neuropixels version? (1.0, 2.0?)
+- [ ] Are raw Kilosort4 output directories available for future spike sorting inclusion?
 
 ## Interface Mapping (Preliminary)
 
