@@ -20,6 +20,8 @@ from .behavior_interface import BatBehaviorInterface
 from .echolocation_interface import BatEcholocationInterface
 from .imu_interface import BatIMUInterface
 from .lfp_interface import BatLFPInterface
+from .ripple_interface import BatRippleInterface
+from .spike_sorting_interface import BatSpikeSortingInterface
 
 
 class Forli2025NWBConverter(NWBConverter):
@@ -29,6 +31,12 @@ class Forli2025NWBConverter(NWBConverter):
         LFPProbe1=BatLFPInterface,
         LFPProbe2=BatLFPInterface,
         LFPProbe3=BatLFPInterface,
+        SpikeSortingProbe1=BatSpikeSortingInterface,
+        SpikeSortingProbe2=BatSpikeSortingInterface,
+        SpikeSortingProbe3=BatSpikeSortingInterface,
+        RippleProbe1=BatRippleInterface,
+        RippleProbe2=BatRippleInterface,
+        RippleProbe3=BatRippleInterface,
         Behavior=BatBehaviorInterface,
         IMU=BatIMUInterface,
         Echolocation=BatEcholocationInterface,

@@ -104,13 +104,33 @@ def session_to_nwb(
     source_data = {}
     conversion_options = {}
 
-    # LFP — one interface per probe
+    # LFP, spike sorting, and ripples — one interface per probe
     for probe_number in [1, 2, 3]:
         lfp_file = data_dir_path / f"LFP_probe{probe_number}.mat"
         if lfp_file.is_file():
             key = f"LFPProbe{probe_number}"
             source_data[key] = dict(
                 file_path=str(lfp_file),
+                probe_number=probe_number,
+                t_offset=t_offset,
+            )
+            conversion_options[key] = dict(stub_test=stub_test)
+
+        su_file = data_dir_path / f"SU_kilosort4_outdir_probe{probe_number}.mat"
+        if su_file.is_file():
+            key = f"SpikeSortingProbe{probe_number}"
+            source_data[key] = dict(
+                file_path=str(su_file),
+                probe_number=probe_number,
+                t_offset=t_offset,
+            )
+            conversion_options[key] = dict(stub_test=stub_test)
+
+        rpl_file = data_dir_path / f"RPL_probe{probe_number}.mat"
+        if rpl_file.is_file():
+            key = f"RippleProbe{probe_number}"
+            source_data[key] = dict(
+                file_path=str(rpl_file),
                 probe_number=probe_number,
                 t_offset=t_offset,
             )

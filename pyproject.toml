@@ -16,6 +16,8 @@ forli2025 = [
     "scipy",
     "numpy",
     "hdmf",
+    "mat-io",
+    "pandas",
 ]
 
 [build-system]
