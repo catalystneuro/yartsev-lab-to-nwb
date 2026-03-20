@@ -19,6 +19,13 @@ forli2025 = [
     "mat-io",
     "pandas",
 ]
+notebooks = [
+    "pynapple",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "jupyter",
+]
 
 [build-system]
 requires = ["hatchling"]
